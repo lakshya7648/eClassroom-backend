@@ -116,7 +116,7 @@ router.get("/study_material", FetchTeacher, async (req, res) => {
   });
   const study = await Study.find({ classroom_id: { $in: clsrm } });
 
-  res.send({ study });
+  res.send({ success:true, study });
 });
 
 // Route # : For Getting the classroom specific study material
